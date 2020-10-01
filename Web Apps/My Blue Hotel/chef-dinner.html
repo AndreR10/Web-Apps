@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<title>DINNER WITH THE CHEF</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<link rel="stylesheet" href="css/style.css" />
+
+
+<body>
+<!-- Sidebar with image -->
+<div class="w3-container w3-indigo" id="top-menu">
+  <h2>THE CHEF</h2>
+  <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%"></nav>
+</div>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-light-grey w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-light-grey w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+      <a href="restaurant.html" class="w3-bar-item w3-button w3-text-black w3-hover-black" onclick="closeNav()">Restaurant</a>
+      <a href="recreation.htmL" class="w3-bar-item w3-button w3-text-black w3-hover-black" onclick="closeNav()">Recreation</a>
+      <a href="room-service.html" class="w3-bar-item w3-button w3-text-black w3-hover-black" onclick="closeNav()">Room Service</a>
+    </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-indigo w3-xxlarge w3-text-white w3-hover-text-black" style="height:63px;width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+  <!-- Main Container-->
+  <div class="container">
+    <!--App zone-->
+    <div class="app">   
+
+      <div class="w3-padding">
+        <h3>Instructions</h3>
+        <div class="w3-container w3-padding">
+          <ul class="w3-ul">
+            <li><span class="w3-badge">1</span> Enter the number of people that will attend the dinner</li>
+            <li><span class="w3-badge">2</span> Enter the amount that you are willing to pay for the dinner</li>
+            <li><span class="w3-badge">3</span> And confirm it </li>
+          </ul>
+          <p class="w3-padding">When the times runs out the higher licitation wins </p>
+        </div>
+      </div>
+
+      <div id='countdown'>
+
+      </div>
+
+      <div class="w3-cell-row w3-margin" style="width:90%">
+        <div class="w3-container w3-cell">
+          <i class='fa fa-users' style='font-size:36px'></i>
+        </div>
+        <div class="w3-container w3-cell">
+          <input class="w3-input w3-border w3-center w3-round-xxlarge" type="number" placeholder="0">
+        </div>
+      </div>
+   
+      <div class="w3-cell-row w3-margin" style="width:90%">
+        <div class="w3-container w3-cell">
+          <h3>Licitation:</h3>
+        </div>
+        <div class="w3-container w3-cell">
+          <input id ="valorLicitacao" class="w3-input w3-border w3-center w3-round-xxlarge" type="number" placeholder="0">
+        </div>
+      </div>
+      
+       
+      <div class="w3-center">
+          <div class="w3-cell-row">
+              <div class="w3-cell  w3-center ">
+                <button id="button_check" onclick="validLicitation()"><i class="fa fa-check-circle" style="font-size:48px; color: green"></i></button>
+                <div id="check" class="w3-panel w3-center w3-topbar w3-bottombar w3-border-green w3-round-xxlarge">
+                    <h3>Success!</h3>
+                    <p>Licitation completed</p>
+                    <br>
+                </div>
+              </div>
+          </div>
+          
+          <div id="return" class="w3-container w3-center">
+            <a href="restaurant.html"><i class='fa fa-chevron-circle-left' style="font-size:48px"></i></a>
+          </div>   
+      </div>
+    <!--End App zone-->
+    </div>
+  </div>
+</div> 
+<!-- Footer --> 
+<div class="w3-bottom">
+  <div class="w3-bar w3-indigo">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hover-blue" style="width:33%"><i class="fa fa-user" style="font-size:25px"></i></a>
+    <a href="main.html" class="w3-bar-item w3-button w3-padding-16 w3-hover-blue" style="width:33%"><i class="fa fa-home" style="font-size:30px"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hover-blue" style="width:33%"><i class="fa fa-cog" style="font-size:25px"></i></a>
+  </div>
+<!-- End footer -->
+</div>  
+  
+<!-- END PAGE CONTENT -->
+</div>
+</body>
+</html>

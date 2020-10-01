@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<title>BAR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/drinkScript.js"></script>
+<link rel="stylesheet" href="css/style.css"/>
+
+
+<body>
+<!-- Sidebar with image -->
+<div class="w3-container w3-indigo" id="top-menu">
+  <h2>BAR</h2>
+  <nav class="w3-sidebar w3-hide-medium w3-hide-small" style="width:40%"></nav>
+</div>
+
+<!-- Hidden Sidebar (reveals when clicked on menu icon)-->
+<nav class="w3-sidebar w3-light-grey w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-light-grey w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="restaurant.html" class="w3-bar-item w3-button w3-text-black w3-hover-black" onclick="closeNav()">Restaurant</a>
+    <a href="recreation.html" class="w3-bar-item w3-button w3-text-black w3-hover-black" onclick="closeNav()">Recreation</a>
+    <a href="room-service.html" class="w3-bar-item w3-button w3-text-black w3-hover-black" onclick="closeNav()">Room Service</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%">
+  <!-- Menu icon to open sidebar -->
+  <span class="w3-button w3-top w3-indigo w3-xxlarge w3-text-white w3-hover-text-black" style="height:63px;width:auto;right:0;" onclick="openNav()"><i class="fa fa-bars"></i></span>
+  <!-- Main Container-->
+  <div class="container">
+    <!--App zone-->
+    <div class="app" id="barCSS">   
+        <div class="w3-container w3-margin w3-center">
+            <button onclick="dropdown_main('Demo2')" class="w3-button w3-topbar w3-border-blue-gray w3-light-grey w3-large w3-margin-bottom w3-round">
+                  Drinks Menu</button>
+              <div id="Demo2" class="w3-hide w3-container">
+               
+                <div class="w3-row">
+                    <div class="w3-col s4 w3-center">
+                        <div class="w3-dropdown-click">
+                            <button onclick="dropdown_wine()" class="w3-button w3-bottombar w3-border-blue-gray w3-light-gray w3-round">Wine</button>
+                            <div id="wine" class="w3-dropdown-content w3-bar-block w3-border">
+                              <button id="wine_item1" class="w3-bar-item w3-button">Dona Paterna (minho).....16.00$</button>
+                              <button id="wine_item2" class="w3-bar-item w3-button">Vinhas do lasso (lisboa).....16.00$</button>
+                              <button id="wine_item3" class="w3-bar-item w3-button">Vicentino (alentejo).....17.00$</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-col s4 w3-center">
+                        <div class="w3-dropdown-click">
+                            <button onclick="dropdown_gin()" class="w3-button w3-bottombar w3-border-blue-gray w3-light-gray w3-round">Gin</button>
+                            <div id="gin" class="w3-dropdown-content w3-bar-block w3-border">
+                              <button id="gin_item1" class="w3-bar-item w3-button">Beefeater.....6.00$</button>
+                              <button id="gin_item2" class="w3-bar-item w3-button">Bombay sapphire.....7.00$</button>
+                              <button id="gin_item3" class="w3-bar-item w3-button">Hendrick's.....10.00$</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w3-col s4 w3-center">
+                        <div class="w3-dropdown-click">
+                            <button onclick="dropdown_cocktails()" class="w3-button w3-bottombar w3-border-blue-gray w3-light-gray w3-round">Cocktails</button>
+                            <div id="cocktails" class="w3-dropdown-content w3-bar-block w3-border">
+                              <div id="cocktail_item1" class="w3-bar-item w3-button"><p>French 75.....</p><p>8.00$</p></div>
+                              <div id="cocktail_item2"class="w3-bar-item w3-button"><p>Paloma.....</p><p>8.00$</p></div>
+                              <div id="cocktail_item3"class="w3-bar-item w3-button"><p>Last word.....</p><p>8.50$</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+          </div>
+          
+          <div class="w3-container  w3-center">
+              <table id="order_table" class="w3-table w3-center w3-light-grey">
+                  <tr id="table_top" class="w3-center">
+                    <th>Item</th>
+                    <th>Amount</th>
+                    <th>Price</th>
+                  </tr>
+  
+                  <tr class="w3-pale-green">
+                    <td class="w3-large">Total:</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>   
+          </div>
+          <br>
+          
+          <div class="w3-panel w3-pale-blue w3-leftbar w3-border-blue w3-margin-left w3-margin w3-small w3-center">
+              <p>You know that your drink can be delivered here you want?</p>
+          </div>
+             
+
+          <div class="w3-container w3-margin w3-padding w3-center">
+              <h4>Select where you want it:</h5>
+                <label">Pool </label><input class="w3-check" type="checkbox">
+
+                <label">Room </label><input class="w3-check" type="checkbox">
+
+                <label">SPA </label><input class="w3-check" type="checkbox" disabled>
+          </div>
+
+          <div class="w3-container w3-center w2-margin">
+              <div id="check" class="w3-panel w3-center w3-topbar w3-bottombar w3-border-green w3-round-xxlarge">
+                  <h4>Success!</h4>
+                  <p>Order completed</p>
+              </div>
+          </div>
+            
+          
+          <div class="w3-margin">
+              <div>
+                <button id="button_check" onclick="successLicitation()"><i class="fa fa-check-circle" style="font-size:48px; color: green"></i></button>
+              </div>
+  
+              <div id="return">
+                <a href="restaurant.html"><i class='fa fa-chevron-circle-left' style="font-size:48px"></i></a>
+              </div>   
+          </div>
+    <!--End App zone-->
+    </div>
+  </div>
+</div> 
+<!-- Footer --> 
+<div class="w3-bottom">
+  <div class="w3-bar w3-indigo">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hover-blue" style="width:33%"><i class="fa fa-user" style="font-size:25px"></i></a>
+    <a href="main.html" class="w3-bar-item w3-button w3-padding-16 w3-hover-blue" style="width:33%"><i class="fa fa-home" style="font-size:30px"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hover-blue" style="width:33%"><i class="fa fa-cog" style="font-size:25px"></i></a>
+  </div>
+<!-- End footer -->
+</div>  
+  
+<!-- END PAGE CONTENT -->
+</div>
+</body>
+</html>

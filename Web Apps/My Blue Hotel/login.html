@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<title>LOGIN - MYBLUEHOTEL</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+      rel="stylesheet">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/login.css"/>
+<script src="js/loginScript.js"></script>
+
+
+<body class="w3-indigo">
+<!-- Page Content -->
+<div class="w3-main w3-padding-large" style="margin-left:40%;">
+    <div class="app">
+      <div class="w3-container w3-center">
+        <img src="imgs/logo-horizontal.png" alt="Logo My Blue Hotel" style="width:100%">
+        <div class="box" method="post">
+          <!-- Authentication Zone-->
+          <div class="w3-padding authent" id="authent">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/217233/puff.svg" alt="Authenticating user">
+            <h3>AUTHENTICATING USER...</h3>
+          <!-- End Authentication Zone-->
+          </div>
+          <div class="loginData" id="loginData">
+            <input type="text" id="userNameLogin" name="" placeholder="Username">
+            <input type="password" id="passLogin" name="" placeholder="Password">
+            <button type="button" name="Submit" id="submitLogin">Submit</button>
+            <div id="tempUser">
+              <p>Please use the following details</p>
+              <p>Username: 123</p>
+              <p>Password: 123</p>
+            </div>
+          </div>
+          <div class="infoData" id="infoData">
+            <img id="mapHotel" src="imgs/map.png">
+          </div>
+        </div>          
+      </div>
+    <!--End App zone-->
+    </div>
+  </div>
+</div> 
+<!-- Footer --> 
+<div class="w3-bottom">
+  <div class="w3-bar w3-indigo">
+    <a id="infoButtonBar" class="w3-bar-item w3-button w3-padding-16 w3-hover-blue" style="width:33%"><i class="fa fa-info" style="font-size:33px"></i></a>
+    <a id="homeButtonBar" class="w3-bar-item w3-button w3-padding-16 w3-hover-blue" style="width:33%"><i class="fa fa-home" style="font-size:33px"></i></a>
+    <a href="tel:123-456-789" id="callButtonBar" class="w3-bar-item w3-button w3-padding-16 w3-hover-blue" style="width:33%"><i class="fa fa-phone" style="font-size: 33px;"></i></a>
+  </div>
+<!-- End footer -->
+</div>  
+  
+<!-- END PAGE CONTENT -->
+</div>
+</body>
+</html>
